@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import { NotesContext } from "../store/NotesContext";
 import ToDoPart from "./ToDoPart";
 import AddNotes from "./AddNotes";
+import "./NotesList.css";
+
 
 function NotesList() {
   const { notes } = useContext(NotesContext);
 
   return (
-    <div>
+    <div className="NotesList">
       <AddNotes />
       <h1>Notes</h1>
       {notes.map((note) => (

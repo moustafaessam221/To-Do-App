@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { NotesContext } from "../store/NotesContext";
+import "./AddNotes.css";
+import toast from "react-hot-toast";
 
 function AddNotes() {
   const { addNote } = useContext(NotesContext);
@@ -10,17 +12,22 @@ function AddNotes() {
   const [job, setJob] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault();
-    addNote({ title, day, difficulty, job });
-    setTitle("");
-    setDay("");
-    setDifficulty("");
-    setJob("");
+    if (title && day && difficulty && job) {
+      e.preventDefault();
+      addNote({ title, day, difficulty, job });
+      setTitle("");
+      setDay("");
+      setDifficulty("");
+      setJob("");
+      toast.success("Note added successfully");
+    } else {
+      alert("Please fill in all fields");
+    }
   }
 
   return (
-    <div>
-      <h1>Add Notes</h1>
+    <div className="add-notes">
+      <h2>Add Notes</h2>
       <form>
         <input
           type="text"

@@ -1,0 +1,9 @@
+.NotesList {
+    width: 550px;
+    height: auto;
+    background-color: #d5ccff9d;
+    margin: 10px auto;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+}

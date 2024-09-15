@@ -1,0 +1,45 @@
+.add-notes {
+    margin-top: 20px;
+    max-width: 40%;
+    min-width: 300px;
+    margin: 10px auto;
+  }
+  
+  .add-notes form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .add-notes form input, select {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-notes form input:focus, select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-notes form button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .add-notes form button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .add-notes form button:active {
+    background-color: #3e8e41;
+    /* transform: translateY(2px); */
+  }

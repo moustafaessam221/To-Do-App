@@ -4,6 +4,18 @@ import { NotesContext } from "../store/NotesContext";
 
 function ToDoPart( { title, day, difficulty, job, id } ) {
 
+
+  function checkDifficulty() {
+    if (difficulty === "1") {
+      return <div className='easy diff'><div></div></div>;
+    } else if (difficulty === "2") {
+      return <div className='med diff'><div></div><div></div></div>;
+    } else if (difficulty === "3") {
+      return <div className='hard diff'><div></div><div></div><div></div></div>;
+    }
+  }
+
+
   const {removeNote} = useContext(NotesContext);
   return (
     <div className="ToDoPart">
@@ -12,7 +24,7 @@ function ToDoPart( { title, day, difficulty, job, id } ) {
       <div className="day-diff-job">
         <div className="dayAndDifficulty">
           <div className="day">{day}</div>
-          <div className="diff">{difficulty}</div>
+          {checkDifficulty()}
         </div>
         <div className="job">{job}</div>
       </div>

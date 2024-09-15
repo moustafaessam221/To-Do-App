@@ -3,6 +3,8 @@ import "./App.css";
 import axios from "axios";
 import { NotesContext } from "./store/NotesContext";
 import NotesList from "./components/NotesList";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -47,6 +49,7 @@ function App() {
     <NotesContext.Provider value={{ notes, addNote, removeNote }}>
       <div className="App">
         <NotesList />
+        <Toaster />
       </div>
     </NotesContext.Provider>
   );

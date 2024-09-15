@@ -3,7 +3,6 @@
     height: 130px;
     margin: 10px auto;
     background-color: white;
-    border: 1px solid green;
     border-radius: 12px;
     padding: 24px;
     position: relative;
@@ -38,6 +37,34 @@
     color: #2B1887;
     font-size: 24px;
     font-weight: 600;
+}
+.diff {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+    width: 96px;
+}
+.diff * {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px 8px 8px 15px;
+}
+.easy {
+    * {
+        background-color: blue;
+    }}
+
+.med {
+    * {
+        background-color: yellow;
+    }
+}
+
+.hard {
+    * {
+        background-color: red;
+    }
 }
 
 .remove {
