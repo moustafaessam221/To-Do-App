@@ -1,0 +1,53 @@
+.ToDoPart {
+    width: 512px;
+    height: 130px;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+}
+
+.day-diff-job {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.dayAndDifficulty {
+    width: 156px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.day {
+    width: 48px;
+    height: 35px;
+    background-color: #E42C5F;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.job {
+    color: #2B1887;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.remove {
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
