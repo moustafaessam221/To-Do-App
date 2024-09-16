@@ -7,6 +7,17 @@
     padding: 24px;
     position: relative;
 }
+.title {
+    color: #0e043e;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.completed {
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+
 
 .day-diff-job {
     display: flex;

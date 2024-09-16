@@ -5,21 +5,47 @@
       "title": "Test 4",
       "day": "Mon",
       "difficulty": "1",
-      "job": "Carrer"
+      "job": "Carrer",
+      "completed": true
     },
     {
       "id": "a308",
       "title": "This is for testing",
       "day": "Tue",
       "difficulty": "2",
-      "job": "Career"
+      "job": "Career",
+      "completed": true
     },
     {
       "id": "d50b",
       "title": "Hard",
       "day": "Wed",
       "difficulty": "3",
-      "job": "Carem"
+      "job": "Carem",
+      "completed": true
+    },
+    {
+      "id": "6a3d",
+      "title": "Eat",
+      "day": "Sat",
+      "difficulty": "2",
+      "job": "Personal life"
+    },
+    {
+      "id": "eecc",
+      "title": "league of legends",
+      "day": "Sun",
+      "difficulty": "3",
+      "job": "gaming life",
+      "completed": false
+    },
+    {
+      "id": "73c5",
+      "title": "get 1 billion $",
+      "day": "Fri",
+      "difficulty": "1",
+      "job": "personal life",
+      "completed": false
     }
   ]
 }

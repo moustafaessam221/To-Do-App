@@ -4,24 +4,42 @@ import ToDoPart from "./ToDoPart";
 import AddNotes from "./AddNotes";
 import "./NotesList.css";
 
-
 function NotesList() {
   const { notes } = useContext(NotesContext);
+
+
+  function returnNotes(note) {
+    return (<ToDoPart
+    key={note.id}
+    id={note.id}
+    title={note.title}
+    day={note.day}
+    difficulty={note.difficulty}
+    job={note.job}
+    completed={note.completed}
+  />);
+  }
+
 
   return (
     <div className="NotesList">
       <AddNotes />
-      <h1>Notes</h1>
-      {notes.map((note) => (
-        <ToDoPart
-          key={note.id}
-          id={note.id}
-          title={note.title}
-          day={note.day}
-          difficulty={note.difficulty}
-          job={note.job}
-        />
-      ))}
+      <div className="todo">
+        <h1>To do list</h1>
+        {notes.map((note) =>
+          note.completed ? null : (
+            returnNotes(note)
+          )
+        )}
+      </div>
+      <div className="Completed">
+        <h1>Completed</h1>
+        {notes.map((note) =>
+          note.completed ? (
+            returnNotes(note)
+          ) : null
+        )}
+      </div>
     </div>
   );
 }

@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 function AddNotes() {
   const { addNote } = useContext(NotesContext);
 
+  const [showForm, setShowForm] = useState(false);
+
   const [title, setTitle] = useState("");
   const [day, setDay] = useState("");
   const [difficulty, setDifficulty] = useState("");
@@ -25,41 +27,53 @@ function AddNotes() {
     }
   }
 
+  function toggleForm() {
+    setShowForm(!showForm);
+  }
+
   return (
-    <div className="add-notes">
-      <h2>Add Notes</h2>
-      <form>
-        <input
-          type="text"
-          placeholder="Title"
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <select onChange={(e) => setDay(e.target.value)}>
-          <option value="">Select Day</option>
-          <option value="Sat">Sat</option>
-          <option value="Sun">Sun</option>
-          <option value="Mon">Mon</option>
-          <option value="Tue">Tue</option>
-          <option value="Wed">Wed</option>
-          <option value="Thu">Thu</option>
-          <option value="Fri">Fri</option>
-        </select>
-        <select onChange={(e) => setDifficulty(e.target.value)}>
-          <option value="">Select Difficulty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <input
-          type="text"
-          placeholder="Job"
-          onChange={(e) => setJob(e.target.value)}
-        />
-        <button type="submit" className="btn" onClick={handleSubmit}>
-          Add
-        </button>
-      </form>
-    </div>
+    <>
+      <button className="add-button" onClick={() => toggleForm()}>
+        Add
+      </button>
+      {showForm && (
+        <div className="add-notes">
+          <button className="close-button" onClick={() => setShowForm(false)}>X</button>
+          <h2>Add Notes</h2>
+          <form>
+            <input
+              type="text"
+              placeholder="Title"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <select onChange={(e) => setDay(e.target.value)}>
+              <option value="">Select Day</option>
+              <option value="Sat">Sat</option>
+              <option value="Sun">Sun</option>
+              <option value="Mon">Mon</option>
+              <option value="Tue">Tue</option>
+              <option value="Wed">Wed</option>
+              <option value="Thu">Thu</option>
+              <option value="Fri">Fri</option>
+            </select>
+            <select onChange={(e) => setDifficulty(e.target.value)}>
+              <option value="">Select Difficulty</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Job"
+              onChange={(e) => setJob(e.target.value)}
+            />
+            <button type="submit" className="btn" onClick={handleSubmit}>
+              Add
+            </button>
+          </form>
+        </div>
+      )}
+    </>
   );
 }
 
