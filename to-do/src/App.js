@@ -18,6 +18,7 @@ function App() {
   function addNote(newNote) {
     axios.post("http://localhost:8000/notes", newNote).then((response) => {
       setNotes([...notes, response.data]);
+      toast.success("Note added successfully!");
     });
   }
 
@@ -26,6 +27,7 @@ function App() {
     console.log("Removing note with id:", id); // Debugging line
     axios.delete(`http://localhost:8000/notes/${id}`).then((response) => {
       setNotes(notes.filter((note) => note.id !== id));
+      toast.error("Note removed successfully!");
     });
   }
 

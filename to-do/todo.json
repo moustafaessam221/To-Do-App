@@ -1,14 +1,6 @@
 {
   "notes": [
     {
-      "id": "3260",
-      "title": "Test 4",
-      "day": "Mon",
-      "difficulty": "1",
-      "job": "Carrer",
-      "completed": true
-    },
-    {
       "id": "a308",
       "title": "This is for testing",
       "day": "Tue",
@@ -29,7 +21,8 @@
       "title": "Eat",
       "day": "Sat",
       "difficulty": "2",
-      "job": "Personal life"
+      "job": "Personal life",
+      "completed": true
     },
     {
       "id": "eecc",
@@ -46,6 +39,13 @@
       "difficulty": "1",
       "job": "personal life",
       "completed": false
+    },
+    {
+      "id": "6586",
+      "title": "Win Lottery",
+      "day": "Tue",
+      "difficulty": "1",
+      "job": "personal life"
     }
   ]
 }
