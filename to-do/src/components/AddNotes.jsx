@@ -4,9 +4,8 @@ import "./AddNotes.css";
 import toast from "react-hot-toast";
 
 function AddNotes() {
-  const { addNote } = useContext(NotesContext);
+  const { addNote, showForm, setShowForm } = useContext(NotesContext);
 
-  const [showForm, setShowForm] = useState(false);
 
   const [title, setTitle] = useState("");
   const [day, setDay] = useState("");

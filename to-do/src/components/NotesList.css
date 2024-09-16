@@ -11,5 +11,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    
+}
+.big-title {
+    color: white;
 }

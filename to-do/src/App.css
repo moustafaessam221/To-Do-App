@@ -1,0 +1,12 @@
+
+.project-title {
+    background-clip: text;
+    -webkit-text-fill-color: text;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: cursive;
+}

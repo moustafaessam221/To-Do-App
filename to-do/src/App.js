@@ -7,6 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     axios.get("http://localhost:8000/notes").then((response) => {
@@ -44,8 +45,18 @@ function App() {
   }
 
   return (
-    <NotesContext.Provider value={{ notes, addNote, removeNote, toggleCompleted }}>
+    <NotesContext.Provider
+      value={{
+        notes,
+        addNote,
+        removeNote,
+        toggleCompleted,
+        showForm,
+        setShowForm,
+      }}
+    >
       <div className="App">
+        <p className="project-title">My awesome to-do list</p>
         <NotesList />
         <Toaster />
       </div>

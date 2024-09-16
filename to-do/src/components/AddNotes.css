@@ -6,19 +6,19 @@
   margin: 10px auto;
   position: absolute;
   z-index: 1;
-  /* background-color: rgba(234, 223, 223, 0.851); */
   background: linear-gradient(
     45deg,
     rgba(234, 223, 223, 0.851),
     rgba(255, 255, 255, 0.851)
   );
   backdrop-filter: blur(5px);
-  border: 1px solid rgb(255, 255, 255, 0.851);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.851);
   border-radius: 12px;
   padding: 24px;
-
+  backdrop-filter: blur(10px);
+  filter: blur(0px);
 }
+
 .close-button {
   position: absolute;
   top: 0;

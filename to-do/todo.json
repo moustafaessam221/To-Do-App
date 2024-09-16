@@ -22,7 +22,7 @@
       "day": "Sat",
       "difficulty": "2",
       "job": "Personal life",
-      "completed": true
+      "completed": false
     },
     {
       "id": "eecc",
@@ -38,14 +38,15 @@
       "day": "Fri",
       "difficulty": "1",
       "job": "personal life",
-      "completed": false
+      "completed": true
     },
     {
       "id": "6586",
       "title": "Win Lottery",
       "day": "Tue",
       "difficulty": "1",
-      "job": "personal life"
+      "job": "personal life",
+      "completed": true
     }
   ]
 }
